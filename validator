@@ -1,0 +1,39 @@
+#!/bin/bash
+function terraformPackage() {
+         TERRAFORM=`which terraform | wc -l`
+          if [ $TERRAFORM != 1 ]; then
+            echo "Terraform Package is missing Please follow the link for installation"
+            echo "https://www.terraform.io/downloads.html"
+	 fi
+}
+function onprem() {
+         ONPREM=`which onprem | wc -l`
+          if [ ONPREM != 1 ] ; then
+            echo "Please follow the link for installation"
+            echo "Install Successfully"
+	 fi
+}
+
+function awsCloud() {
+         AWS=`which aws | wc -l`
+          if [ $AWS != 1 ] ; then
+            echo "AWS CLI is missing Please follow the link for installation"
+            echo "https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html"
+	 fi
+}
+
+
+function azureCloud() {
+         AZ=`which az | wc -l`
+          if [ $AZ != 1 ]  ; then
+            echo "Azure CLI is missing Please follow the link for installation"
+            echo "https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?view=azure-cli-latest"
+	 fi
+}
+function googleCloud() {
+         GC=`which gc | wc -l`
+          if [ $GC != 1 ]  ; then
+            echo "Google CLI is missing Please follow the link for installation"
+            echo "https://cloud.google.com/sdk/docs/quickstart-linux"
+	 fi
+}
